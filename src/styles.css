@@ -1,0 +1,94 @@
+.container {
+	background: url(./assets/bg-stars.svg);
+	object-fit: cover;
+	height: 100%;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 1.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5rem;
+	color: var(--text-white);
+	text-align: center;
+	margin-top: 7.5rem;
+}
+
+.countdown {
+	margin-top: 8rem;
+	display: flex;
+	gap: 3rem;
+	justify-content: center;
+}
+
+.card {
+	height: 10rem;
+	width: 10rem;
+	background-color: var(--card-background);
+	border-radius: 0.75rem;
+	position: relative;
+	box-shadow: 0 1rem var(--black-blue);
+	overflow: hidden;
+	color: var(text-primary);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card::before,
+.card::after {
+	content: '';
+	position: absolute;
+	width: 1rem;
+	height: 1rem;
+	background-color: var(--black-blue); /* Use the dark color */
+	border-radius: 50%;
+}
+
+.card::before {
+	top: calc(50% - 0.5rem);
+	left: -0.5rem;
+}
+
+.card::after {
+	top: calc(50% - 0.5rem);
+	right: -0.5rem;
+}
+
+.content {
+	z-index: 1;
+}
+
+.count-value {
+	font-size: 6rem;
+	font-weight: 700;
+	color: var(--text-primary);
+}
+
+.line {
+	height: 1px;
+	width: 100%;
+	background-color: var(--black-blue);
+	position: absolute;
+	top: 50%;
+    opacity: 0.75;
+}
+
+.card-label {
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 2.5rem;
+	color: var(--text-secondary);
+	letter-spacing: 0.5rem;
+	font-weight: 700;
+}
+
+footer {
+	background: url(./assets/pattern-hills.svg);
+	background-size: cover;
+	height: 197px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
