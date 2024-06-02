@@ -26,8 +26,10 @@ const Countdown = () => {
 		)
 
 		if (now > launch) {
-			// If the launch date is in the past, update it to the next year
-			launch.setFullYear(now.getFullYear() + 1)
+			setDaysLeft(0)
+            setHoursLeft(0)
+            setMinutesLeft(0)
+            setSecondsLeft(0)
 		}
 
 		const updateCountdown = () => {
@@ -46,12 +48,9 @@ const Countdown = () => {
 				setSecondsLeft(seconds.toString().padStart(2, '0'))
 			}
 		}
-
-		// Update countdown immediately and then every second
 		updateCountdown()
 		const intervalId = setInterval(updateCountdown, 1000)
 
-		// Cleanup interval on component unmount
 		return () => clearInterval(intervalId)
 	}, [])
 
